@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+.App {
+  font-family: Inter;
+  text-align: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 350px;
+  padding: 20px;
+  background-color: #1c1c1c;
+}
+
+.reactMovie {
+  width: 200px;
+}
+
+.movieDb {
+  width: 100px;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+.main {
+  color: #ffffff;
+  line-height: normal;
+  background-color: #1c1c1c;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  margin-left: 40px;
+}
+
+p {
+  margin-left: 40px;
+  margin-top: 40px;
+  font-size: 17px;
+}
+
+.inputContainer {
+  background-color: #1c1c1c;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.inputCard {
+  width: 90%;
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #353535;
+  color: white;
+}
+
+.searchIcon {
+  position: absolute;
+  color: white;
+  left: 83%;
+  top: 38%;
+}
+
+h2 {
+  color: #353535;
+  text-align: center;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.unHidden {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.parent {
+  min-height: 90%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  font-size: 25px;
+  flex-direction: column;
+}
+
+.card img {
+  width: 200px;
+  border-radius: 15px;
+  height: 90%;
+}
+
+.moviesContainer {
+  margin-top: 50px;
+}
+
+.right,
+.left {
+  width: 100%;
+  max-width: 100px;
+  height: 50px;
+  background-color: #1c1c1c;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.buttonsSwitch {
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  color: #fff;
+  flex-direction: row;
+  list-style: none;
+
+}
+
+ul li {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  float: inline-start;
+}
