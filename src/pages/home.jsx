@@ -1,7 +1,7 @@
-import "../index.css";
 import React, { useState, useEffect } from "react";
 import VideosList from "./../components/videos";
 import Input from "./../components/input";
+import { fetcher } from "../utils/fetcher";
 
 // import { arrayOfVideos } from "./db/db";
 
@@ -25,10 +25,12 @@ export default function Home() {
                 }
             )
                 .then((res) => res.json())
-                .then((data) => setVideos(data.results))
+                .then((responseData) => {
+                    setVideos(responseData.results)
+                })
 
                 .catch((err) => console.error("error:" + err));
-        };
+        }
         fethcData();
     }, []);
 
@@ -66,26 +68,24 @@ export default function Home() {
         setSearchValue(prompt);
         if (prompt.length > 0) {
             const filteredData = videos.filter((video) => {
+
                 return contentType === "movies" ? video.title.toLowerCase().includes(prompt.toLowerCase()) : video.name.toLowerCase().includes(prompt.toLowerCase());
             });
             setVideos(filteredData);
         } else setVideos(videos);
     };
 
+
     return (
         <>
 
             <div className="main">
-
-                <h1>Expend4bles</h1>
-                {document.title}
-                <p>
-                    Armed with every weapon they can get their hands on and the skills to
-                    use them, The Expendables are the world’s last line of defense and the
-                    team that gets called when all other options are off the table. But
-                    new team members with new styles and tactics are going to give “new
-                    blood” a whole new meaning.
-                </p>
+                <button className="top">TOP</button>
+                <h1>Spider man no way home</h1>
+                <p>Lorem ipsum dolor sit amet consectetur. Ac tortor vitae id lorem. Consectetur donec cursus massa nunc ullamcorper semper.</p>
+                <p>2022 |  <span className="age">16+</span> | 1 Seans | TV series for teenagers</p>
+                <p>Seans 1 - Eplscode 1 - Genre comedy, detective, detective </p>
+                <button className="watch">Watch</button>
             </div>
 
             <div className="inputContainer">
@@ -100,7 +100,7 @@ export default function Home() {
                         Series
                     </button>
                 </div>
-                <h2>Popular {contentType === "movies" ? "Movies" : "Series"}</h2>
+                <h2 className="popular">Popular {contentType === "movies" ? "Movies" : "Series"}</h2>
                 {videos.length > 0 ? (
                     <VideosList data={videos} />
                 ) : (

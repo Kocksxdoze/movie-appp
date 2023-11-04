@@ -1,8 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
 .App {
   font-family: Inter;
   text-align: center;
+}
+
+body {
+  background-color: #0D0C11;
 }
 
 * {
@@ -18,7 +25,7 @@
   align-items: center;
   gap: 350px;
   padding: 20px;
-  background-color: #1c1c1c;
+  background-color: transparent;
 }
 
 .reactMovie {
@@ -32,10 +39,44 @@
 }
 
 .main {
-  color: #ffffff;
+  height: 50vh;
+  color: #FFFFFF;
   line-height: normal;
-  background-color: #1c1c1c;
-  text-align: center;
+  background-color: transparent;
+  text-align: start;
+  background: rgba(5, 5, 5, 0.473) url('../public/img/1.svg');
+  font-family: Inter;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.age {
+  color: #E50914;
+}
+
+.top {
+  margin-top: 50px;
+  background-color: #E50914;
+  border: none;
+  border-radius: 25px;
+  color: #FFFFFF;
+  width: 45px;
+  height: 20px;
+  font-weight: 700;
+  margin-left: 50px;
+}
+
+.watch {
+  margin-top: 15px;
+  background-color: #E50914;
+  border: none;
+  border-radius: 25px;
+  color: #FFFFFF;
+  width: 80px;
+  height: 30px;
+  font-weight: 800;
+  margin-left: 40px;
 }
 
 h1 {
@@ -50,7 +91,7 @@ p {
 }
 
 .inputContainer {
-  background-color: #1c1c1c;
+  background-color: transparent;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -103,20 +144,24 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 10px !important;
 }
 
 .card {
+  height: 425px;
   display: flex;
   align-items: center;
   width: 250px;
   font-size: 25px;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .card img {
   width: 200px;
   border-radius: 15px;
-  height: 90%;
+  height: 90% !important;
+  opacity: 0.7 !important;
 }
 
 .moviesContainer {
@@ -127,11 +172,16 @@ h2 {
 .left {
   width: 100%;
   max-width: 100px;
-  height: 50px;
+  height: 30px;
   background-color: #1c1c1c;
   color: white;
   border: none;
   outline: none;
+  border-radius: 30px;
+}
+
+.right {
+  background-color: #E50914 !important;
 }
 
 .buttonsSwitch {
@@ -150,9 +200,221 @@ h2 {
 
 }
 
-ul li {
+ul li a {
+  color: #EDEDED;
+  padding: 20px;
+  list-style-type: none !important;
+}
+
+a {
+  list-style: none !important;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
   display: flex;
   flex-direction: row;
-  padding: 20px;
-  float: inline-start;
+  list-style: none;
+}
+
+.popular {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: #FFFFFF;
+  text-align: start !important;
+  margin-left: 80px;
+}
+
+.logo {
+  color: #e50914e8;
+}
+
+.errorFound {
+  font-size: 52px;
+  margin-top: 300px;
+  color: white;
+}
+
+p {
+  color: #FFFFFF;
+  list-style: none;
+}
+
+div {
+  color: #FFFFFF;
+}
+
+.star {
+  width: 30px;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.columnInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 200px;
+  padding-top: 80px;
+}
+
+.movieContain {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.redText {
+  color: #E50914;
+}
+
+.rows {
+  display: flex;
+  flex-direction: row !important;
+}
+
+.movieTitle {
+  font-size: 32px;
+  margin-left: 35px;
+}
+
+.aboutText {
+  margin-left: 200px;
+  margin-top: 40px;
+  font-size: 32px;
+  color: #FFFFFF;
+  text-align: left !important;
+}
+
+.aboutTexty {
+  text-align: left;
+  width: 40%;
+  margin-left: 200px;
+}
+
+.poster {
+  border-radius: 20px;
+}
+
+.commentContainer {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.typeCom {
+  outline: none;
+  width: 1025px;
+  background: transparent;
+  color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF8C;
+}
+
+.oneComment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.inputCom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.commentDesc p {
+  margin: 0;
+}
+
+.commentDesc {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.thg {
+  margin-top: 100px;
+  text-align: left;
+  margin-left: 400px;
+  font-size: 32px;
+}
+
+.more {
+  padding-top: 45px;
+}
+
+.films {
+  display: flex;
+  flex-direction: column;
+}
+
+.filmsrow {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.footerLine {
+  margin-top: 100px;
+}
+
+.footer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerMain {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 50%;
+}
+
+.footerMain p {
+  width: 60%;
+}
+
+.footerMain img {
+  width: 200px;
+  margin-left: 40px;
+}
+
+.footerNavigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+}
+
+.footernav {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footernav ul {
+  margin-top: 20px;
+  display: block;
 }
