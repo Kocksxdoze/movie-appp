@@ -13,7 +13,6 @@ export default function Header() {
                     <ul className="hidden md:flex flex-auto space-x-2">
                         <Link to={`/`} >
                             <li
-                                onclick="selected()"
                                 className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white  cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 shadow-md rounded"
                             >
                                 Home
@@ -21,21 +20,18 @@ export default function Header() {
                         </Link>
                         <Link to={`/movies`} >
                             <li
-                                onclick="selected()"
                                 className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white-600   cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 shadow-md rounded"
                             >
                                 Movies
                             </li>
                         </Link>
                         <li
-                            onclick="selected()"
                             className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white-600   cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 shadow-md rounded"
                         >
                             Series
                         </li>
                         <Link to={`/`} >
                             <li
-                                onclick="selected()"
 
                                 className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white-600   cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 shadow-md rounded"
                             >
@@ -83,7 +79,6 @@ export default function Header() {
                 {/* for smaller devcies */}
                 <div className="block md:hidden w-full mt-5 ">
                     <div
-                        onclick="selectNew()"
                         className="cursor-pointer px-4 py-3 text-white bg-indigo-600 rounded flex justify-between items-center w-full"
                     >
                         <div className="flex space-x-2">
@@ -122,31 +117,26 @@ export default function Header() {
                             className=" hidden font-normal text-base leading-4 absolute top-2  w-full rounded shadow-md"
                         >
                             <li
-                                onclick="selectedSmall()"
                                 className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
                             >
                                 Arts
                             </li>
                             <li
-                                onclick="selectedSmall()"
                                 className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
                             >
                                 Space
                             </li>
                             <li
-                                onclick="selectedSmall()"
                                 className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
                             >
                                 Game
                             </li>
                             <li
-                                onclick="selectedSmall()"
                                 className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
                             >
                                 Utility
                             </li>
                             <li
-                                onclick="selectedSmall()"
                                 className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
                             >
                                 Cards
