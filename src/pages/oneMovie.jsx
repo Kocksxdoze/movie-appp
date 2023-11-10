@@ -4,6 +4,7 @@ import fetcher from "../utils/fetcher";
 import MovieCard from "../components/movieCard";
 import Comments from "../components/comments";
 import Thoughts from "../components/thoughts";
+import MovieSlider from "../components/movieSlider";
 
 function OneMovie() {
     const [data, setData] = useState([])

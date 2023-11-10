@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import VideosList from "./../components/videos";
 import Input from "./../components/input";
 import { fetcher } from "../utils/fetcher";
+import MovieSlider from "../components/movieSlider";
+import Navigation from "../components/navigation";
 
-// import { arrayOfVideos } from "./db/db";
 
 export default function Home() {
     const [videos, setVideos] = useState([]);
@@ -87,26 +88,10 @@ export default function Home() {
                 <p>Seans 1 - Eplscode 1 - Genre comedy, detective, detective </p>
                 <button className="watch">Watch</button>
             </div>
+            <Navigation />
 
-            <div className="inputContainer">
-                <Input setSearchValue={filterData} searchValue={searchValue} />
-            </div>
-            <div className="moviesContainer">
-                <div className="buttonsSwitch">
-                    <button className="left" onClick={switchToMovies}>
-                        Movies
-                    </button>
-                    <button className="right" onClick={switchToSeries}>
-                        Series
-                    </button>
-                </div>
-                <h2 className="popular">Popular {contentType === "movies" ? "Movies" : "Series"}</h2>
-                {videos.length > 0 ? (
-                    <VideosList data={videos} />
-                ) : (
-                    <h2> No matches for {searchValue} </h2>
-                )}
-            </div>
+            {/* <MovieSlider title={"Recommended"} url={"/3/movie/top_rated"} />
+            <MovieSlider title={"Recommended"} data={videos} /> */}
         </>
     );
 }

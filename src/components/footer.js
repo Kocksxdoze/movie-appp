@@ -1,6 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import {
+    Tag,
+    Flex,
+    Box,
+    Image,
+    chakra,
+    Heading,
+    Button,
+} from '@chakra-ui/react'
 function Footer() {
     return (
         <div>
@@ -41,7 +49,8 @@ function Footer() {
                     </div>
                 </div>
             </div>
-
+            <Box textAlign={"center"} mt={20} mb={10}>© Filmberry.com - 2023
+            </Box>
         </div>
     )
 }

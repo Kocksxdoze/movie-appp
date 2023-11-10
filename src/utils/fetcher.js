@@ -8,10 +8,11 @@ export default async function fetcher(url) {
             headers: {
                 accept: "application/json",
                 Authorization:
-                    "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwODk3ODRiZjZkZDY0YjM1OTg1OWUxM2MxZTAyYjc4ZiIsInN1YiI6IjY1MzkwYTcxMGZiMTdmMDEzOGZjY2I0NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-uRJx4DycDZ1HnYGChzFThZVy2FKxZQ8DeNtudYP1wM"
+                    "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MGZkYTFjMDhiODE1ZTZkMzU2NmYzYTQ5ZTBjYWE2ZCIsInN1YiI6IjY1MzkwYTcxMGZiMTdmMDEzOGZjY2I0NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.16Lq58HvoXoclQo_3BtMj_IAguqwpSGyUSDBfSDH1AE"
             }
         }
     )
+
     return response.data
 }
 
