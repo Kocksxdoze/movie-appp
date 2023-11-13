@@ -1,9 +1,11 @@
+
 import { Link } from "react-router-dom";
+
 export default function Header() {
     return (
         <div className="2xl:container 2xl:mx-auto">
             {/*- more free and premium Tailwind CSS components at https://tailwinduikit.com/ -*/}
-            <div className="bg-transparent rounded shadow-lg py-5 px-7">
+            <div className="bg-transparent rounded  py-5 px-7">
                 <nav className="flex justify-between">
                     <div className="flex items-center space-x-10 lg:pr-96 pr-6">
 
@@ -13,27 +15,27 @@ export default function Header() {
                     <ul className="hidden md:flex flex-auto space-x-2">
                         <Link to={`/`} >
                             <li
-                                className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white  cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 shadow-md rounded"
+                                className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white  cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 rounded"
                             >
                                 Home
                             </li>
                         </Link>
                         <Link to={`/movies`} >
                             <li
-                                className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white-600   cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 shadow-md rounded"
+                                className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white-600   cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 rounded"
                             >
                                 Movies
                             </li>
                         </Link>
                         <li
-                            className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white-600   cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 shadow-md rounded"
+                            className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white-600   cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 rounded"
                         >
                             Series
                         </li>
                         <Link to={`/`} >
                             <li
 
-                                className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white-600   cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 shadow-md rounded"
+                                className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white-600   cursor-pointer px-3 py-2.5 font-normal text-xm leading-3 rounded"
                             >
                                 My list
                             </li>
@@ -77,73 +79,7 @@ export default function Header() {
                     </div>
                 </nav>
                 {/* for smaller devcies */}
-                <div className="block md:hidden w-full mt-5 ">
-                    <div
-                        className="cursor-pointer px-4 py-3 text-white bg-indigo-600 rounded flex justify-between items-center w-full"
-                    >
-                        <div className="flex space-x-2">
-                            <span id="s1" className="font-semibold text-sm leading-3 hidden">
-                                Selected:{" "}
-                            </span>
-                            <p
-                                id="textClicked"
-                                className="font-normal text-sm leading-3 focus:outline-none hover:bg-gray-800 duration-100 cursor-pointer "
-                            >
-                                Collections
-                            </p>
-                        </div>
-                        <svg
-                            id="ArrowSVG"
-                            className=" transform"
-                            width={24}
-                            height={24}
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M6 9L12 15L18 9"
-                                stroke="white"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                    </div>
-                    <div className=" relative">
-                        <ul
 
-                            id="list"
-                            className=" hidden font-normal text-base leading-4 absolute top-2  w-full rounded shadow-md"
-                        >
-                            <li
-                                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
-                            >
-                                Arts
-                            </li>
-                            <li
-                                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
-                            >
-                                Space
-                            </li>
-                            <li
-                                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
-                            >
-                                Game
-                            </li>
-                            <li
-                                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
-                            >
-                                Utility
-                            </li>
-                            <li
-                                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
-                            >
-                                Cards
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
 

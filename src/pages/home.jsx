@@ -1,85 +1,13 @@
-import React, { useState, useEffect } from "react";
-import VideosList from "./../components/videos";
-import Input from "./../components/input";
-import { fetcher } from "../utils/fetcher";
+import React from "react";
 import MovieSlider from "../components/movieSlider";
 import Navigation from "../components/navigation";
-
-
+import Chips from "../categories/chips";
 export default function Home() {
-    const [videos, setVideos] = useState([]);
-    const [searchValue, setSearchValue] = useState("");
 
-    const [contentType, setContentType] = useState("movies");
-
-    useEffect(() => {
-        const fethcData = () => {
-            fetch(
-                "https://api.themoviedb.org/3/movie/top_rated?language=ru-RU&page=1",
-                {
-                    method: "GET",
-                    headers: {
-                        accept: "application/json",
-                        Authorization:
-                            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwODk3ODRiZjZkZDY0YjM1OTg1OWUxM2MxZTAyYjc4ZiIsInN1YiI6IjY1MzkwYTcxMGZiMTdmMDEzOGZjY2I0NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-uRJx4DycDZ1HnYGChzFThZVy2FKxZQ8DeNtudYP1wM"
-                    }
-                }
-            )
-                .then((res) => res.json())
-                .then((responseData) => {
-                    setVideos(responseData.results)
-                })
-
-                .catch((err) => console.error("error:" + err));
-        }
-        fethcData();
-    }, []);
-
-    const fetchContent = (type) => {
-        const apiKey =
-            "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwODk3ODRiZjZkZDY0YjM1OTg1OWUxM2MxZTAyYjc4ZiIsInN1YiI6IjY1MzkwYTcxMGZiMTdmMDEzOGZjY2I0NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-uRJx4DycDZ1HnYGChzFThZVy2FKxZQ8DeNtudYP1wM";
-        const apiUrl =
-            type === "movies"
-                ? "https://api.themoviedb.org/3/movie/top_rated?language=ru-RU&page=1"
-                : "https://api.themoviedb.org/3/tv/popular?language=ru-RU&page=1";
-
-        fetch(apiUrl, {
-            method: "GET",
-            headers: {
-                accept: "application/json",
-                Authorization: `Bearer ${apiKey}`
-            }
-        })
-            .then((res) => res.json())
-            .then((data) => setVideos(data.results))
-            .catch((err) => console.error("error:" + err));
-    };
-
-    const switchToMovies = () => {
-        setContentType("movies");
-        fetchContent("movies");
-    };
-
-    const switchToSeries = () => {
-        setContentType("series");
-        fetchContent("series");
-    };
-
-    const filterData = (prompt) => {
-        setSearchValue(prompt);
-        if (prompt.length > 0) {
-            const filteredData = videos.filter((video) => {
-
-                return contentType === "movies" ? video.title.toLowerCase().includes(prompt.toLowerCase()) : video.name.toLowerCase().includes(prompt.toLowerCase());
-            });
-            setVideos(filteredData);
-        } else setVideos(videos);
-    };
 
 
     return (
         <>
-
             <div className="main">
                 <button className="top">TOP</button>
                 <h1>Spider man no way home</h1>
@@ -89,9 +17,11 @@ export default function Home() {
                 <button className="watch">Watch</button>
             </div>
             <Navigation />
-
-            {/* <MovieSlider title={"Recommended"} url={"/3/movie/top_rated"} />
-            <MovieSlider title={"Recommended"} data={videos} /> */}
+            <Chips />
+            <MovieSlider title={"Recommended"} url={"/movie/top_rated"} />
+            <MovieSlider title={"Popular"} url={"/movie/popular"} />
+            <MovieSlider title={"Series"} url={"/tv/popular"} />
+            <MovieSlider title={"Multifilms"} url={"/movie/upcoming"} />
         </>
     );
 }

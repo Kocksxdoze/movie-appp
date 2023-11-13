@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 export default async function fetcher(url) {
-    const response = await axios.get((`https://api.themoviedb.org/3${url}`),
+    const response = await axios.get((`https://api.themoviedb.org/3${url}?adult=false`),
         {
             method: "GET",
             headers: {

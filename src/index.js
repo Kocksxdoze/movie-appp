@@ -5,24 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import { ChakraProvider } from '@chakra-ui/react';
-import {
-  Tag,
-  TagLabel,
-  TagLeftIcon,
-  TagRightIcon,
-  TagCloseButton,
-  Flex,
-  Box,
-  Image,
-  chakra,
-} from '@chakra-ui/react'
-
+import { theme } from "./lib/theme"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <App />
       </ChakraProvider>
     </BrowserRouter>
