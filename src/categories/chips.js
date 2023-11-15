@@ -25,9 +25,38 @@ function Chips() {
                     spaceBetween={-30}
                     slidesPerView={8}
                     freeMode={true}
-                    loop
                     modules={[Navigation]}
                     navigation={true}
+                    breakpoints={{
+                        // when window width is >= 320px
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                        },
+                        // when window width is >= 480px
+                        480: {
+                            slidesPerView: 2,
+                            spaceBetween: 2,
+                        },
+                        // when window width is >= 640px
+                        640: {
+                            slidesPerView: 3,
+                            spaceBetween: 2,
+                        },
+
+                        1028: {
+                            slidesPerView: 5,
+                            spaceBetween: 2,
+                        },
+                        1920: {
+                            slidesPerView: 7,
+                            spaceBetween: 2,
+                        },
+                        2000: {
+                            slidesPerView: 10,
+                            spaceBetween: 2,
+                        },
+                    }}
                 >
                     {data.map((oneGenre, indx) => (
                         <SwiperSlide key={indx} dir='row'>

@@ -49,7 +49,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <Box textAlign={"center"} mt={20} mb={10}>© Filmberry.com - 2023
+            <Box textAlign={"center"} mt={20} mb={10} fontFamily={"Inter"}>© Filmberry.com - 2023
             </Box>
         </div>
     )
